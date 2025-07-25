@@ -1,6 +1,8 @@
 Project Overview
 This project demonstrates an inter-process communication (IPC) setup using AIDL between multiple Android modules:
 
+Please find release apks [version1.0.0] (https://github.com/sunilparmar04/VeriZPay/releases/tag/Version1.0.0)
+
 VeriZPay (App Module) – The main payment application.
 
 DeviceAnalyticRemote (Remote App) – Runs as a separate process and exposes device health data through a bound service.
