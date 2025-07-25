@@ -66,5 +66,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(":deviceanalyticInterface"))
+    implementation(libs.spalshscreen.api)
+
 
 }

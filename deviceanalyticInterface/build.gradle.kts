@@ -18,6 +18,15 @@ android {
         consumerProguardFiles("consumer-rules.pro")
     }
 
+    signingConfigs {
+        create("release") {
+            keyAlias = "verizpay"
+            keyPassword = "verizpay"
+            storeFile = file("../keys/verizpay_signature")
+            storePassword = "verizpay"
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -25,6 +34,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
