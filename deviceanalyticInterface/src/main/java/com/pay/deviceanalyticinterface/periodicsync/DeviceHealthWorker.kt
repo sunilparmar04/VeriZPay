@@ -36,7 +36,6 @@ class DeviceHealthWorker @AssistedInject constructor(
 
         fun schedule(context: Context) {
 
-
             val request = PeriodicWorkRequestBuilder<DeviceHealthWorker>(
                 repeatInterval = 20,
                 repeatIntervalTimeUnit = TimeUnit.MINUTES,
