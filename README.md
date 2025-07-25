@@ -20,3 +20,12 @@ Clean Architecture: Code is modularized for better separation of concerns, with 
 
 Use Case
 This setup is designed for apps needing secure and efficient access to device analytics from a background service running in a different process, such as monitoring device health during financial transactions.
+
+
+### App Screens
+![Screenshot 1](screen/1.png)
+![Screenshot 2](screen/2.png)
+![Screenshot 3](screen/3.png)
+
+### Demo Video
+![Demo Video](screen/video.mov)
