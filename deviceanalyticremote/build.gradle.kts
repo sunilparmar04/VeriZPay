@@ -5,18 +5,21 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     kotlin("kapt")
     alias(libs.plugins.google.dagger.hilt)
+
 }
 
 android {
-    namespace = "com.pay.verizpay"
+    namespace = "com.pay.deviceanalytic"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
+
     defaultConfig {
-        applicationId = "com.pay.verizpay"
+        applicationId = "com.pay.deviceanalytic"
         minSdk = libs.versions.minSdk.get().toInt()
-        targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = libs.versions.versionCode.get().toInt()
-        versionName = libs.versions.versionName.get()
+        compileSdk = libs.versions.targetSdk.get().toInt()
+
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -37,7 +40,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-
     buildFeatures {
         compose = true
     }
@@ -53,18 +55,18 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(project(":deviceanalyticInterface"))
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
-
-    implementation(libs.kotlinx.coroutines.android)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(project(":deviceanalyticInterface"))
 
 }

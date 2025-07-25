@@ -21,3 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "VeriZPay"
 include(":app")
+include(":deviceanalyticInterface")
+include(":deviceanalyticremote")

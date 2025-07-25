@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <permission
+        android:name="com.pay.deviceanalytic.READ_ANALYTICS"
+        android:label="Read Analytics"
+        android:protectionLevel="signature" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VeriZPay">
+
+        <service android:name="com.pay.deviceanalytic.service.DeviceAnalyticService"
+            android:exported="true"
+            android:permission="com.pay.deviceanalytic.READ_ANALYTICS">
+            <intent-filter>
+                <action android:name="com.pay.deviceanalytic.BIND_ANALYTICS_SERVICE" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
